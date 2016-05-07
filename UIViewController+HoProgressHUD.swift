@@ -116,7 +116,7 @@ extension UIViewController {
             
         }) { (finish) in
             
-            self.hz_delayOnMainQueueWithSeconds(duration, task: {
+            self.ho_delayOnMainQueueWithSeconds(duration, task: {
                 
                 UIView.animateWithDuration(0.3, animations: {
                     
@@ -232,7 +232,7 @@ extension UIViewController {
     }
     
     
-    func ho_dismissLoadingHUDWithIdentifier(identifier: HoHoHudIdentifier, afterDelaySeconds seconds: Double, animated: Bool) {
+    func ho_dismissLoadingHUDWithIdentifier(identifier: HoHudIdentifier, afterDelaySeconds seconds: Double, animated: Bool) {
         var parentView = self.view
         if self.view is UITableView {
             parentView = UIApplication.sharedApplication().keyWindow
