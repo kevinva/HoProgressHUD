@@ -160,7 +160,7 @@ extension UIViewController {
         var checkView = parentView.viewWithTag(viewTag)
         while checkView != nil {
             #if DEBUG
-                print("\(__FUNCTION__), tag: \(viewTag)")
+                print("\(#function), tag: \(viewTag)")
             #endif
             
             viewTag = Int(arc4random_uniform(max - min) + min)
