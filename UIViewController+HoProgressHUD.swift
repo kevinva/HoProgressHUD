@@ -241,7 +241,7 @@ extension UIViewController {
         let hud = parentView.viewWithTag(identifier)
         if let foundHud = hud {
             if animated {
-                self.hz_delayOnMainQueueWithSeconds(seconds, task: { 
+                self.ho_delayOnMainQueueWithSeconds(seconds, task: {
                     
                     UIView.animateWithDuration(0.3, animations: { 
                         
@@ -256,7 +256,7 @@ extension UIViewController {
                 })
             }
             else {
-                self.hz_delayOnMainQueueWithSeconds(seconds, task: { 
+                self.ho_delayOnMainQueueWithSeconds(seconds, task: {
                     
                     foundHud.removeFromSuperview()
                     
