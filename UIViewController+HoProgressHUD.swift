@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias HoHudIdentifier = Int
+public typealias HoHudIdentifier = Int
 
 extension UIViewController {
     
