@@ -25,7 +25,7 @@ extension UIViewController {
     }
     
     
-    func ho_showHUDWithText(text: String?, duration: Double) {
+    public func ho_showHUDWithText(text: String?, duration: Double) {
         guard let messageText = text else {
             return
         }
@@ -133,7 +133,7 @@ extension UIViewController {
         }
     }
     
-    func ho_showLoadingHUD() -> HoHudIdentifier {
+    public func ho_showLoadingHUD() -> HoHudIdentifier {
         let bgView: UIView = {
             
             let bgView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 320.0, height: 568.0))
@@ -232,7 +232,7 @@ extension UIViewController {
     }
     
     
-    func ho_dismissLoadingHUDWithIdentifier(identifier: HoHudIdentifier, afterDelaySeconds seconds: Double, animated: Bool) {
+    public func ho_dismissLoadingHUDWithIdentifier(identifier: HoHudIdentifier, afterDelaySeconds seconds: Double, animated: Bool) {
         var parentView = self.view
         if self.view is UITableView {
             parentView = UIApplication.sharedApplication().keyWindow
