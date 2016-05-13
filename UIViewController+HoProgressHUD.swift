@@ -133,6 +133,7 @@ extension UIViewController {
         }
     }
     
+    
     public func ho_showLoadingHUD() -> HoHudIdentifier {
         let bgView: UIView = {
             
@@ -159,10 +160,6 @@ extension UIViewController {
         var viewTag = Int(arc4random_uniform(max - min) + min)
         var checkView = parentView.viewWithTag(viewTag)
         while checkView != nil {
-            #if DEBUG
-                print("\(#function), tag: \(viewTag)")
-            #endif
-            
             viewTag = Int(arc4random_uniform(max - min) + min)
             checkView = parentView.viewWithTag(viewTag)
         }
